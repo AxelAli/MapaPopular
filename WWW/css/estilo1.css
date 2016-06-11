@@ -8,6 +8,7 @@
 }
 body{
 	margin:0;
+	
 	text-align:center;
 		color:white;
 		font-family: Century Gothic, sans-serif;
@@ -43,8 +44,10 @@ font-size:44px;
 	padding-bottom:5%;
 	font-size:22px;
 	background-color:#343838;
+	
 }
 a{
+	text-decoration: none;
 	padding-top:5%;
 	color: white;
 	font-size:32px;

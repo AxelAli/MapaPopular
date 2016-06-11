@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+    
+    <title>Mapa Popular:Buscar Trabajo</title>
+ 
+    <meta name="description" content="Mapa Popular"> 
+    <link rel="alternate" title="Mapa Popular: Buscar Trabajo">            
+    <meta name="viewport" content="width=420">
+    <meta name="author" content="Axel Ali">
+    <link rel="shortcut icon" href="../icon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" type="text/css" href="../css/estilo2.css"> 
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+	<script type="text/javascript" src="../js/geo.js"></script>
+  </head>
+ 
+ 
+ 
+  <body>
+  <a  href="../index.html"><div class="logo"> Mapa Popular:Trabajo </div></a>
+  <div class="descripcion">Estas Buscando Trabajo <br>Puedes Buscar Por Dirrecion o Activar la Geolocalizacion</br></div>
+	<div class="opciones" style="padding-bottom:5% ;font-size:22px;  text-align:center; " onclick="return BuscarGeo()">
+	Activa La Geolocalizacion
+	<br>
+	<button onclick="getLocation()">Buscar Con Geolocalizacion</button></br>
+	Tambien Puedes Buscar La Dirrecion Aqui Abajo
+    <input id="dirreciontxt" type="text" style="width: 89% ; display:inline-block" placeholder="Por Ejemplo: Villa Soldati o Av. Rivadavia 235 Caballito o Facultad De Medicina " />   
+
+    <input id="Button1" type="button" value="Buscar"  style="width: 10%; display:inline-block" onclick="return FindLocaiton()" />
+
+	<div id ="map" style="height: 500px" >	</div>
+	</div>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script> 
+	window.onload = InitializeMap;
+	document.getElementById('dirreciontxt').onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == '13'){
+      
+	  return BuscarxDirrecion();
+	
+
+    }
+  }
+	</script>
+	<div class="bottom">Orgullosamente hecho en argentina ! 2016<div>Sin fines de lucro, publicidad o sponsoreo<div></div>
+	<a  href="https://www.facebook.com/MapaPopularArgentina"><i class="fa fa-facebook-square"  aria-hidden="true"></i></a>
+	<a  href="https://twitter.com/MapapopularArg"><i class="fa fa-twitter-square"  aria-hidden="true"></i></a>
+	<a  href="https://plus.google.com/u/0/communities/110910709548930465488"><i class="fa fa-google-plus-square"  aria-hidden="true"></i></a>
+	<a  href="https://github.com/AxelAli/MapaPopular"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+	<a  href="mailto:axelali2016@gmail.com?Subject=MapaPopular"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+	<a  href="https://www.facebook.com/MapaPopularArgentina"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+	
+	</div></div>
+  </body>
+  </html>
