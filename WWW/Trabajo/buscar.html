@@ -19,22 +19,25 @@
  
  
   <body>
-  <a  href="../index.html"><div class="logo"> Mapa Popular:Trabajo </div></a>
+  <a  href="../index.html"><div class="logo"> Mapa Popular:Trabajo  </div></a>
   <div class="descripcion">Estas Buscando Trabajo <br>Puedes Buscar Por Dirrecion o Activar la Geolocalizacion</br></div>
-	<div class="opciones" style="padding-bottom:5% ;font-size:22px;  text-align:center; " onclick="return BuscarGeo()">
+	<div class="opciones" style=" font-size:22px;  text-align:center; " onclick="return BuscarGeo()">
 	Activa La Geolocalizacion
 	<br>
+
 	<button onclick="getLocation()">Buscar Con Geolocalizacion</button></br>
 	Tambien Puedes Buscar La Dirrecion Aqui Abajo
     <input id="dirreciontxt" type="text" style="width: 89% ; display:inline-block" placeholder="Por Ejemplo: Villa Soldati o Av. Rivadavia 235 Caballito o Facultad De Medicina " />   
 
-    <input id="Button1" type="button" value="Buscar"  style="width: 10%; display:inline-block" onclick="return FindLocaiton()" />
+    <input id="Button1" type="button" value="Buscar"  style="width: 10%; display:inline-block" onclick="alert('Thanks for the click')" />
 
 	<div id ="map" style="height: 500px" >	</div>
 	</div>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<script> 
 	window.onload = InitializeMap;
+	
+	window.onload = document.body.requestFullscreen();
 	document.getElementById('dirreciontxt').onkeypress = function(e){
     if (!e) e = window.event;
     var keyCode = e.keyCode || e.which;
@@ -53,7 +56,7 @@
 	<a  href="https://github.com/AxelAli/MapaPopular"><i class="fa fa-github-square" aria-hidden="true"></i></a>
 	<a  href="mailto:axelali2016@gmail.com?Subject=MapaPopular"><i class="fa fa-envelope" aria-hidden="true"></i></a>
 	<a  href="https://www.facebook.com/MapaPopularArgentina"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-	
+
 	</div></div>
   </body>
   </html>

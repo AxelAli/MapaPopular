@@ -24,6 +24,7 @@
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
+	  
 	  var myOptions =
         {
             zoom: 15,
@@ -47,7 +48,7 @@
 
 
 	
-    function FindLocaiton() {
+    function buscarlugar() {
         geocoder = new google.maps.Geocoder();
         InitializeMap();
 
@@ -62,6 +63,7 @@
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             disableDefaultUI: true
         };
+		
         map = new google.maps.Map(document.getElementById("map"), myOptions);
 		
 
