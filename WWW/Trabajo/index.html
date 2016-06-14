@@ -9,10 +9,20 @@
     <link rel="alternate" title="Mapa Popular:Trabajo">            
     <meta name="viewport" content="width=420">
     <meta name="author" content="Axel Ali">
+<meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="MP: Trabajo" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="shortcut icon" href="icon.ico" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" type="text/css" href="../css/estilo2.css"> 
+	<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
 	<link rel="stylesheet" href="../css/font-awesome.min.css">
 	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="apple-touch-icon" href="apple-touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../Icon/ios/Icon.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../Icon/ios/AppIcon.appiconset/Icon-60@2x.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../Icon/ios/AppIcon.appiconset/Icon-76@2x.png">
 
   </head>
  
@@ -22,7 +32,7 @@
   <a  href="../index.html"><div class="logo"> Mapa Popular:Trabajo </div></a>
   <div class="descripcion">Encontra , Comparti Y Ofrece Trabajo</div>
 	<a  href="./buscar.html"><div class="opciones">Buscar Trabajo<div class="sub">Busca Trabajo Ofrecido por Los Usuarios</div></div></a>
-    <a  href="./Trabajo.html"><div class="opciones">Encontre Trabajo<div class="sub">Encontraste algun anuncio de trabajo y queres compartirlo?</div></div></a>
+    <a  href="./encontre.html"><div class="opciones">Encontre Trabajo<div class="sub">Encontraste algun anuncio de trabajo y queres compartirlo?</div></div></a>
 	<a  href="./Trabajo.html"><div class="opciones">Ofresco Trabajo<div class="sub">Sos una empresa o ofreces algun tipo de trabajo?</div></div></a>
     <a  href="../index.html"><div class="opciones">Ver Otros Sitios<div class="sub">Mira las otras paginas de Mapa Popular</div></div></a>
 	<a  href="./autor.html"><div class="opciones">Sobre el autor<div class="sub">Sobre el autor y el sitio</div></div></a>
@@ -34,7 +44,18 @@
 	<a  href="https://github.com/AxelAli/MapaPopular"><i class="fa fa-github-square" aria-hidden="true"></i></a>
 	<a  href="mailto:axelali2016@gmail.com?Subject=MapaPopular"><i class="fa fa-envelope" aria-hidden="true"></i></a>
 	<a  href="https://www.facebook.com/MapaPopularArgentina"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-	
+	<script type="text/javascript">
+	$(document).ready(function(){
+        // iOS web app full screen hacks.
+        if(window.navigator.standalone) {
+                // make all link remain in web app mode.
+                $('a').click(function() {
+                        window.location = $(this).attr('href');
+            return false;
+                });
+        }
+});
+</script>
 	</div></div>
   </body>
   </html>

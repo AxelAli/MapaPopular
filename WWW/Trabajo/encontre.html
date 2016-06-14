@@ -3,7 +3,7 @@
 
   
     
-    <title>Mapa Popular:Buscar Trabajo</title>
+    <title>Mapa Popular:Encontre Trabajo</title>
  
     <meta name="description" content="Mapa Popular"> 
     <link rel="alternate" title="Mapa Popular: Buscar Trabajo">            
@@ -28,18 +28,64 @@
  
   <body >
   <a  href="../index.html"><div class="logo"> Mapa Popular:Trabajo  </div></a>
-  <div class="descripcion">Estas Buscando Trabajo <br>Puedes Buscar Por Dirrecion o Activar la Geolocalizacion</br></div>
-	<div class="opciones" style=" font-size:22px;  text-align:center; " >
+  <div class="descripcion">Encontraste Trabajo <br>Confirma La Informacion Por Favor</br></div>
+	<div class="opciones" style=" font-size:16px;  text-align:center; " >
+	Confirma La Dirrecion Actual o Modificala
+    <input id="dirreciontxt" type="text" style="width: 85% ; display:inline-block" placeholder="Pon tu dirrecion Actual " />   
+	<br></br>
+	Requiere Algun Tipo De Experiencia?
+	<select>
+	<option value="0">No Estoy Seguro</option>
+	<option value="1">No Requiere Experiencia</option>
+	<option value="2">Requiere Experiencia</option>
+	</select>
+	<br></br>
+	Sabes el Nombre Del Local?  (De Lo Contraio Dejalo en Blanco)
+	<input id="dirreciontxt" type="text" style="width: 85% ; display:inline-block" placeholder="Nombre Local " />   
+	<br></br>
+	Sabes El Rubro
+		<select>
+	<option value="Desconocido">No Estoy Seguro</option>
+	<option value="1">Alimentos y Bebidas</option>
+	<option value="2">Hoteleria y Alojamiento</option>
+	<option value="3">Animales</option>
+	<option value="4">Audiovisual</option>
+	<option value="5">Automotores</option>
+	<option value="6">Belleza y Cuidado Personal</option>
+	<option value="7">Calzados</option>
+	<option value="8">Deportes</option>
+	<option value="9">Ensenaza y Cursos</option>
+	<option value="10">Fianancieras</option>
+	<option value="11">Entretenimiento</option>
+	<option value="12">Estaciones De Servicio</option>
+	<option value="13">Gastronomia</option>
+	<option value="14">Hogar</option>
+	<option value="15">Indumentaria</option>
+	<option value="16">Industria</option>
+	<option value="17">Jardin</option>
+	<option value="18">Joyeria y Relojeria</option>
+	<option value="19">Juegos De Azar</option>
+	<option value="20">Kiosco</option>
+	<option value="21">Libreria</option>
+	<option value="22">Medicina y Medicamentos</option>
+	<option value="23">Medios De Comunicacion y Publicidad</option>
+	<option value="24">Musica y Teatro</option>
+	<option value="25">Telas</option>
+	<option value="26">Transporte</option>
+	<option value="27">Turismo</option>
+	<option value="28">Otros</option>
+
+	</select>
+	(poner ?)
 	
-    <input id="dirreciontxt" type="text" style="width: 85% ; display:inline-block" placeholder="Por Ejemplo: Villa Soldati o Av. Rivadavia 235 Caballito o Facultad De Medicina " />   
-
-    <input id="Button1" type="button" value="Buscar"  style=" display:inline-block" onclick="buscarlugar();" />
-
-	<div id ="map" style="margin-top:15px; height: 500px" >	</div>
+	
+	
+	
+	<div id ="map" style="margin-top:15px; height:0px" >	</div>
 	</div>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 	<script> 
-	window.onload = IniciarMapa;
+	window.onload = IniciarMapa();
 	
 	$(document).ready(function(){
         // iOS web app full screen hacks.

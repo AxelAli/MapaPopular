@@ -9,7 +9,9 @@ $sql="INSERT INTO puntos (`nombrelocal`,`dirreccion`,`lat`,`lng`,`rubro`,`telefo
 if (mysqli_query($con,$sql))
 {
    echo "Suceso";
+}else{
+	
 }
 
-
+echo "so sad";
 ?>
